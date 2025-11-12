@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrandNest</title>
     <link rel="icon" href="Assets/Images/Title_logo.jpg" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
 </head> 
+
 <body class="bg-black overflow-x-hidden">
-
     <!-- Fixed background Image -->
-    <div class=" w-screen h-screen fixed">
-        <img class="md:block absolute md:w-[1148px] xl:w-full xl:h-full md:h-[700px] top-0 left-5" src="Assets/Images/Background1.png" alt="Website Background Image">
+    <div class=" w-screen h-screen fixed overflow-x-hidden">
+        <img class="md:block absolute h-full md:w-[1148px] xl:w-full xl:h-full md:h-[700px] top-0 left-5" 
+        src="Assets/Images/Background1.png" alt="Website Background Image">
     </div>
-
     <!-- Main Website Content -->
     <main class="bg-transparent w-screen h-screen absolute z-20">
         <!-- Navigation bar -->
         <nav class="flex flex-row flex-wrap justify-between py-5 px-10 items-center fixed w-full z-10 backdrop-blur-3xl">
         <img class="" src="Assets/Images/Nav_logo.png" alt="BrandNest Logo">
-        <i id="menuToggle" class="fa-solid fa-bars-staggered mild-white text-2xl md:hidden"></i>
-        <ul id="menuClose"  class="mild-white transform translate-x-full transition-transform duration-300 md:translate-x-0 bg-red-600 fixed top-0 right-0 p-5 hidden md:bg-none h-screen md:h-0 md:static md:p-0 space-y-4 md:space-y-0 md:flex md:flex-row justify-between md:gap-7 lg:gap-10 text-md" id="mobileMenu">
-            <svg class="fa-solid fa-xmark md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">Home</a></li>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">Services</a></li>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">About Us</a></li>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">Portfolio</a></li>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">Pricing</a></li>
-            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-[#ff5900] after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-[#ff5900]">Contact Us</a></li>
+        <!-- Menu Icon -->
+        <svg id="menuToggle" onclick="openmenu()" aria-label="Open nav" class="fill-white w-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 
+            14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 
+            0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+        <!-- SideBar -->
+        <ul id="mobileMenu" class="transition-all duration-500 ease-in-out hidden text-white bg-[#111111] fixed top-0 p-8 h-screen md:bg-none  md:h-0 md:static md:p-0 space-y-6 md:space-y-0 md:flex md:flex-row justify-between md:gap-7 lg:gap-10 text-md">
+            <!--Close menu Icon -->
+            <svg id="menuClose" onclick="closemenu()" aria-label="Close nav" class="fill-white w-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg>
+            <!-- Navigation Links -->
+            <li class=""><a href="#home" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600
+                 after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600 active">Home</a></li>
+            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600
+                after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600">Services</a></li>
+            <li class=""><a href="#About" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600
+                after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600">About Us</a></li>
+            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600
+                after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600">Portfolio</a></li>
+            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600 
+                after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600">Pricing</a></li>
+            <li class=""><a href="" class="transition-all relative duration-200 after:content-[''] after:h-1 after:bg-orange-600 
+                after:w-0 after:absolute after:-bottom-1 after:left-0 after:duration-500 hover:after:w-full hover:text-orange-600">Contact Us</a></li>
         </ul>
         </nav>
 
     <!-- Hero Section -->
-    <header class="flex justify-between p-5 h-screen">
-
+    <header id="home" class="flex justify-between p-5 h-screen">
+        <div>
+            <h1 class="text-5xl font-bold text-white ">WELCOME TO BRANDNEST</h1>
+            <p class="text-gray-white mt-2">Your one-stop solution for all branding needs.</p>
+        </div>
+        <img src="Assets/Images/header_img.png" alt="">
         </header>
 
-        <div class="h-screen bg-red-600"></div>
+        <div id="About" class="h-screen"></div>
     </main>
 
     <script src="script.js"></script>

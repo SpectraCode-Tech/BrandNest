@@ -1,13 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menuToggle");
-  const menuClose = document.getElementById("menuClose");
-  const mobileMenu = document.getElementById("mobileMenu");
+// Responsive navbar display
+if (window.innerWidth > 768) {
+    sidemenu.style.display = "flex";
+} else {
+    window.onload = function () {
+        sidemenu.style.right = "-200px";
+        sidemenu.style.display = "inline-block";
+    };
+}
 
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-  });
+  //Collapsing and Expanding navbar
+var sidemenu = document.getElementById("mobileMenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
 
-  menuClose.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-  });
-});
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+// Highlighting Navbar sections
+ 
