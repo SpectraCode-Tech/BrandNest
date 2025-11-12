@@ -19,10 +19,10 @@
         src="Assets/Images/Background1.png" alt="Website Background Image">
     </div>
     <!-- Main Website Content -->
-    <main class="bg-transparent w-screen h-screen absolute z-20">
+    <main class="bg-transparent w-screen h-screen absolute">
         <!-- Navigation bar -->
         <nav class="flex flex-row flex-wrap justify-between py-5 px-10 items-center fixed w-full z-10 backdrop-blur-3xl">
-        <img class="" src="Assets/Images/Nav_logo.png" alt="BrandNest Logo">
+        <p class="text-white flex items-center text-2xl md:text-3xl font-bold"><span class="text-[#00ffd0]">Brand</span>Nest<img class="size-13" src="Assets/Images/Title_logo.jpg" alt="BrandNest Logo"></p>
         <!-- Menu Icon -->
         <svg id="menuToggle" onclick="openmenu()" aria-label="Open nav" class="fill-white w-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 
@@ -49,15 +49,21 @@
         </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="flex justify-between p-5 h-screen">
-        <div>
-            <h1 class="text-5xl font-bold text-white ">WELCOME TO BRANDNEST</h1>
-            <p class="text-gray-white mt-2">Your one-stop solution for all branding needs.</p>
+    <header id="home" class="grid grid-cols-1 md:grid-cols-2 justify-between p-5 h-screen items-center text-white">
+        <div class="pl-0 lg:pl-10  mt-20 lg:mt-0">
+            <h1 class="text-center tracking-[5px] md:text-left md:text-xl md:tracking-[10px] text-[#00ffd0] font-normal mb-10"><span class="text-white">WELCOME</span> <span class="text-orange-600">TO</span> BRANDNEST</h1>
+            <h5 class="text-center md:text-left text-gray-white mt-2 text-3xl md:text-4xl w-2xs font-black">Uncover What’s Holding Your <span class="text-[#00ffd0] relative after:content-[''] after:absolute after:bg-orange-600 after:w-4/5 after:h-1 after:left-0 after:bottom-0">Brand</span>  Back</h5>
+            <span class="md:w-[380px] text-center text-[#b3b3b3] mt-5 block space-y-8 md:text-justify">
+            <p class="text-sm md:text-md">We help ambitious brands find hidden gaps in their digital presence — then transform them into scroll-stopping visuals that boost awareness, engagement, and sales.</p>
+            <p class="text-sm md:text-md">Start with your FREE BrandNest Digital Audit and see exactly where you’re leaving money on the table.</p>
+            <a href="" class="bg-[#00ffd0] duration-400 text-black py-2 px-4 rounded hover:bg-transparent hover:border hover:border-white hover:text-white  mb-5 font-extrabold">Get my Free Brand Audit</a>
+        </span>
+
         </div>
-        <img src="Assets/Images/header_img.png" alt="">
+        <img src="Assets/Images/header_img.png" class="hidden md:block lg:w-[85%] justify-self-end" alt="">
         </header>
 
-        <div id="About" class="h-screen"></div>
+        <div id="About" class="p-5"></div>
     </main>
 
     <script src="script.js"></script>

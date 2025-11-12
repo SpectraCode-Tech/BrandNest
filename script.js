@@ -1,5 +1,5 @@
 // Responsive navbar display
-if (window.innerWidth > 768) {
+if (window.innerWidth >= 768) {
     sidemenu.style.display = "flex";
 } else {
     window.onload = function () {
