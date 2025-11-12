@@ -1,4 +1,31 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('Assets/Fonts/Neue-Regrade-Regular-BF65af35d81f2ff.otf');
+}
 
-
-/* WhatsApp Image 2025-08-16 at 03.22.24_c71fa9b8 1 */
+body{
+    font-family: 'Neue Regrade', sans-serif;
+}
+/* Custom-colors */
+.text-green{
+color: #00ffd1;
+}
+.mild-white{
+    color: rgba(255, 255, 255, 1);
+}
+.gray-white{
+    color: rgba(179, 179, 179, 1);
+}
+.text-orange{
+    color: #ff5900;
+}
+.bg-orange{
+    background-color: #ff5900;
+}
+.light-green{
+    color: rgba(222, 255, 166, 1);
+}
+.cyan{
+    color: rgba(0, 255, 209, 1);
+}
