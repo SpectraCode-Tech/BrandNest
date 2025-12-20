@@ -26,10 +26,11 @@
         <nav class="flex flex-row flex-wrap justify-between py-5 px-10 items-center fixed w-full z-10 backdrop-blur-3xl">
         <p class="text-white flex self-center items-center text-2xl md:text-3xl font-bold"><span class="text-[#00ffd0]">Brand</span>Nest<img class="size-13" src="Assets/Images/Title_logo.jpg" alt="BrandNest Logo"></p>
         <!-- Menu Icon -->
-        <svg id="menuToggle" onclick="openmenu()" aria-label="Open nav" class="fill-white w-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+         
+        <div class="w-max h-max p-3 md:hidden rounded-full bg-transparent" onclick="openmenu()"><svg id="menuToggle"  aria-label="Open nav" class="fill-white w-5 md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 
             14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 
-            0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></div>
         <!-- SideBar -->
         <ul id="mobileMenu" class="transition-all duration-500 ease-in-out hidden items-center text-white bg-[#111111] fixed top-0 p-8 h-screen md:bg-none  md:h-0 md:static md:p-0 space-y-6 md:space-y-0 md:flex md:flex-row justify-between md:gap-7 lg:gap-10 text-md">
             <!--Close menu Icon -->
