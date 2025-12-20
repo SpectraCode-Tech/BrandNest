@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('Assets/Fonts/Neue-Regrade-Regular-BF65af35d81f2ff.otf');
+    font-display: swap;
+}
+
+body{
+    font-family: 'Neue Regrade', sans-serif;
+}
+/* Custom-colors */
+.text-green{
+color: #00ffd1;
+}
+
+
+
+.gray-white{
+    color: #b3b3b3;
+}
+.text-orange{
+    color: #ff5900;
+}
+.bg-orange{
+    background-color: #ff5900;
+}
+.light-green{
+    color: rgba(222, 255, 166, 1);
+}
+.cyan{
+    color: #00ffd0;
+}
+.nav-link.active {
+  color: #ff5900;
+  position: relative;
+  font-weight: bold;
+}
+.nav-link.active::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff5900;
+}
+.highlight{
+    /* Base style */ 
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect with cleaner glow */
+.highlight:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 208, 0.8), 
+              0 0 20px rgba(0, 255, 208, 0.6);
+}
