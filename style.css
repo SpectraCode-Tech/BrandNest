@@ -47,6 +47,9 @@ color: #00ffd1;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
 }
+button{
+    cursor: pointer;
+}
 
 /* Hover effect with cleaner glow */
 .highlight:hover {
