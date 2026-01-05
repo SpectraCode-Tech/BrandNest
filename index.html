@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body class="bg-black overflow-x-hidden">
@@ -402,11 +403,11 @@
                             <li>Phone: <a href="tel:+19059060795">+1 (905) 906-0795</a></li>
                         </ul>
                     </div>
-                <form class="mt-10 flex flex-col md:w-1/2 space-y-5">
+                <form class="mt-10 flex flex-col md:w-1/2 space-y-5" id="contact-form">
                     <h1 class="text-center text-[#00ffd0] text-2xl mb-5 font-bold">Send a Message</h1>
-                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white">
-                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white">
-                    <textarea rows="5" placeholder="Your Message" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white"></textarea>
+                    <input type="text" placeholder="Your Name" name="name" id="Name" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white">
+                    <input type="email" placeholder="Your Email" name="email" id="Email" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white">
+                    <textarea rows="5" placeholder="Your Message" name="message" id="Message" class="w-full p-3 rounded-lg bg-[#444354a6] border border-[#b3b3b3] text-white"></textarea>
                     <button type="submit" class="w-max px-10 py-2 bg-[#00ffd0] text-black font-bold rounded-full hover:bg-transparent hover:text-[#00ffd0] border border-[#00ffd0] transition-all ease-in-out duration-500">Send Message</button>
                 </form>
             </span>

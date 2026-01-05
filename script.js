@@ -44,3 +44,29 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+// EmailJS initialization
+(function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "UD0t6YHM8tNkV2OKP",
+            });
+        })();
+
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qswflcp', 'template_63kh4gi', this)
+                    .then(() => {
+                        window.alert('Message Sent Successfully');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+                    document.getElementById('Name').value ='';
+                    document.getElementById('Email').value ='';
+                    document.getElementById('Message').value ='';
+            });
+        }
